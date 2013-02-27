@@ -1,5 +1,5 @@
 {
-	"name": "silverstripe/superfish",
+	"name": "sunnysideup/superfish",
 	"type": "silverstripe-module",
 	"description": "adds the jquery library superfish to your silverstripe website / application",
 	"homepage": "http://www.silverstripe-webdevelopment.com",
