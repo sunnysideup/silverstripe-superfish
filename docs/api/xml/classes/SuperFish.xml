@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="SuperFish" namespace="" name="SuperFish" abstract="false" final="false" start="8" end="54">
+  <file path="/var/www/_modules/superfish/trunk/docs/en/phpdox/../../../code" file="SuperFish.php" realpath="/var/www/_modules/superfish/trunk/code/SuperFish.php" size="1605" time="2015-03-14T10:22:50+13:00" unixtime="1426281770" sha1="3f38e25294825221112ec51b834e6b535a302c8b" relative="code/SuperFish.php"/>
+  <docblock>
+    <description compact="author nicolaas[at]sunnysideup.co.nz"/>
+  </docblock>
+  <extends full="Object" namespace="" name="Object"/>
+  <member name="config" type="string" default="&quot;&quot;" visibility="protected" line="11"/>
+  <method name="set_config" start="12" end="12" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="v" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="get_config" start="13" end="13" abstract="false" final="false" static="true" visibility="public"/>
+  <method name="include_code" start="16" end="27" abstract="false" final="false" static="true" visibility="public"/>
+  <method name="block" start="29" end="34" abstract="false" final="false" static="true" visibility="public"/>
+  <method name="default_config" start="36" end="52" abstract="false" final="false" static="true" visibility="protected"/>
+</class>

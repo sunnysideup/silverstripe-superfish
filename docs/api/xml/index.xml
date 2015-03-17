@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/var/www/_modules/superfish/trunk">
+  <namespace name="">
+    <class name="SuperFish" src="code/SuperFish.php" description="author nicolaas[at]sunnysideup.co.nz" xml="classes/SuperFish.xml"/>
+  </namespace>
+</index>
