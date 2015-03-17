@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<source xmlns="http://xml.phpdox.net/src">
-  <dir name="/var/www/_modules/superfish/trunk">
-    <dir name="code">
-      <file name="SuperFish.php" size="1605" time="2015-03-14T10:22:50+13:00" unixtime="1426281770" sha1="3f38e25294825221112ec51b834e6b535a302c8b" xml="tokens/code/SuperFish.php.xml"/>
-    </dir>
-  </dir>
-</source>
