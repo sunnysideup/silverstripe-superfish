@@ -10,15 +10,15 @@
 //SuperFish::include_code(); // ADD to Page.init() function NOT mysite/_config.php
 /*
 SuperFish::set_config("
-	$(document).ready(function() {
-			$('ul.sf-menu').superfish({
-					delay:       1000,                            // one second delay on mouseout
-					animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation
-					speed:       'fast',                          // faster animation speed
-					autoArrows:  false,                           // disable generation of arrow mark-up
-					dropShadows: false                            // disable drop shadows
-			});
-	});
+    $(document).ready(function() {
+            $('ul.sf-menu').superfish({
+                    delay:       1000,                            // one second delay on mouseout
+                    animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation
+                    speed:       'fast',                          // faster animation speed
+                    autoArrows:  false,                           // disable generation of arrow mark-up
+                    dropShadows: false                            // disable drop shadows
+            });
+    });
 ");
 */
 //===================---------------- END slideshow MODULE ----------------===================
@@ -40,7 +40,3 @@ SuperFish::set_config("
     onShow:        function(){},       // callback function fires once reveal animation completed – 'this' is the opened ul
     onHide:        function(){}        // callback function fires after a sub-menu has closed – 'this' is the ul that just closed
 */
-
-
-
-

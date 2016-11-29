@@ -5,36 +5,47 @@
  *
  **/
 
-class SuperFish extends Object {
+class SuperFish extends Object
+{
+    protected static $config = "";
+    public static function set_config($v)
+    {
+        self::$config = $v;
+    }
+    public static function get_config()
+    {
+        if (self::$config) {
+            return self::$config;
+        } else {
+            return self::default_config();
+        }
+    }
 
 
-	protected static $config = "";
-		static function set_config($v) {self::$config = $v;}
-		static function get_config() {if(self::$config){ return self::$config;} else {return self::default_config();}}
+    public static function include_code()
+    {
+        if (Director::is_ajax()) {
+            self::block();
+        } else {
+            Requirements::javascript(THIRDPARTY_DIR."/jquery/jquery.js");
+            Requirements::javascript('superfish/javascript/hoverIntent.js');
+            Requirements::javascript('superfish/javascript/superfish.js');
+            Requirements::ThemedCSS('superfish');
+            Requirements::customScript(self::get_config(), 'superfishconfig');
+        }
+    }
 
+    public static function block()
+    {
+        Requirements::block('superfish/javascript/hoverIntent.js');
+        Requirements::block('superfish/javascript/superfish.js');
+        Requirements::block('superfish/css/superfish.css');
+        Requirements::block('superfishconfig');
+    }
 
-	static function include_code() {
-		if(Director::is_ajax()) {
-			self::block();
-		}
-		else {
-			Requirements::javascript(THIRDPARTY_DIR."/jquery/jquery.js");
-			Requirements::javascript('superfish/javascript/hoverIntent.js');
-			Requirements::javascript('superfish/javascript/superfish.js');
-			Requirements::ThemedCSS('superfish');
-			Requirements::customScript(self::get_config(), 'superfishconfig');
-		}
-	}
-
-	static function block() {
-		Requirements::block('superfish/javascript/hoverIntent.js');
-		Requirements::block('superfish/javascript/superfish.js');
-		Requirements::block('superfish/css/superfish.css');
-		Requirements::block('superfishconfig');
-	}
-
-	protected static function default_config() {
-		return <<<JS
+    protected static function default_config()
+    {
+        return <<<JS
 SuperFish::set_config("
 	jquery(document).ready(function() {
 			jquery('ul#Nav').superfish({
@@ -49,6 +60,5 @@ SuperFish::set_config("
 
 JS
 ;
-	}
-
+    }
 }
